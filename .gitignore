@@ -1,0 +1,15 @@
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+build
+webapp/code/src/Api.js 
+
+cdk.context.json
+
+# this is where I store my credentials locally for quick config
+local-env.sh
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
