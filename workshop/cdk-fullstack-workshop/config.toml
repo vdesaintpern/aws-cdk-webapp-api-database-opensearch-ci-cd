@@ -1,0 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'CDK Fullstack Workshop'
+theme = "hugo-book"
+uglyurls = true
+
+[params]
+    BookSection = '*'
