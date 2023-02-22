@@ -24,7 +24,7 @@ NOTE :
 
 To make the most of this workshop, it is recommended to have a baseline understanding of core AWS services, infrastructure as code, CDK, containers and single page applications. 
 
-This workshop is based on ReactJS and NodeJS as a baseline example. This could be adapted for other languages such as python, java or Go. 
+This workshop is based on ReactJS and NodeJS as a baseline example. This could be adapted for other languages such as python, Java or Go. 
 
 
 

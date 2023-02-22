@@ -1,7 +1,9 @@
 
 # get the shell
 docker run --rm -it -p 8080:8080 -v $(pwd):/src klakegg/hugo:0.107.0-ext-alpine shell
+docker run --rm -it -p 8080:8080 -v $(pwd):/src klakegg/hugo:0.107.0-ext-ubuntu-onbuild shell
 
+cd cdk-fullstack-workshop
 hugo server --port 8080 --disableFastRender
 
 # then go to local browser http://localhost:8080/ to test

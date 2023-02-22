@@ -127,3 +127,9 @@ export DATABASE_NAME=
 export OS_HOSTNAME=
 export OS_PORT=
 
+
+
+API_URL_FOUND=`aws cloudformation list-exports --query "Exports[?Name=='apiurlpreprod'].Value" --no-paginate --output text`
+
+echo "export const apiURL = 'http://$API_URL_FOUND';" > ./src/Api.js
+                    "echo $API_URL_FOUND",
