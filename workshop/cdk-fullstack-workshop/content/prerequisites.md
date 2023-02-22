@@ -71,5 +71,7 @@ npm install -g aws-cdk@X.YY.Z      # install specific version
 
 > This workshop has been tested with version 2 of CDK and we recommend to use the latest CDK v2 available.
 
+## Bootstrap CDK
 
+(TODO)
 

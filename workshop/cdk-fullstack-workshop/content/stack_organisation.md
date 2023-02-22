@@ -11,9 +11,9 @@ Resources to be deployed by CDK are organised in stacks. These stacks will conta
 
 The [code of this workshop](https://link "Link to code root") has been organised to enhance readability and increase separation of concern. This is intended to give you a baseline for organising your own projects.
 
-## Top folder separation
+## Top level organisation
 
--- IMG with First level
+![New user](code/top-level.png)
 
 At the top level, code has been organised by ownership and lifecycle.
 
@@ -31,8 +31,47 @@ First level of organisation brings immediate benefits :
 
 Each folder contains 2 specific subfolders:
 
+![New user](code/sub-level.png)
+
 - Code: for application code such as JS code
 - IaC: for resources needed on top of shared folders ex: ECS cluster or AWS Lambda
 
 > IaC folder may have dependancies on shared 'infra' stack
+
+### Code
+
+This folder contains application code. This is specific to the kind of project or language used. 
+
+As an example, in this workshop, API is writing in TS and deployed in a container. Thus, code folder contains the following resources.
+
+![New user](code/code-folder.png)
+
+### IaC
+
+This folder contains infrastructure to deploy the code provided. This is specific to the tools used to deploy.
+
+As an example, in this workshop, API is deployed in an ECS cluster with a CodePipeline to build the container and update the cluster. Resources needed are provisioned using CDK.
+
+![New user](code/iac-folder.png)
+
+## CDK Stacks and environments
+
+Stack organisation follows the folder structure to help separate ownership.
+
+In this workshop, we will showcase how to deploy both *with* and *without a pipeline* in 2 environments (test and prod) for illustration purposes :
+- baseline and infra stacks will be deployed manually for each environment
+- api and webapp stacks will create a pipeline covering both environments
+
+At the end of the workshop, we will get:
+
+- 2 baseline stacks : 1 for test and 1 for prod
+- 2 infra stacks : 1 for test and 1 for prod
+- api stack : 1 pipeline covering deployment to test and prod
+- webapp stack : 1 pipeline covering deployment to test and prod
+
+-- IMG to illustrate
+
+> In real-life, you may chose to have pipelines for all the stacks. This adds an additional process allowing for additional checks.
+
+
 
